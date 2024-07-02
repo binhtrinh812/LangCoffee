@@ -1,5 +1,4 @@
-    <!-- Banner -->
-    <section class="hero_section">
+<section class="hero_section">
         <div class="section_container">
             <div class="hero_container">
                 <div class="text_section">
@@ -9,8 +8,8 @@
                         Tao xin chúng mày, hãy dí deadline một cách tinh tế hơn!
                     </p>
                     <div class="hero_section_button">
-                        <button class="button">Cà phê</button>
-                        <button class="button">Kể truyện</button>
+                        <a href="/LangCoffee/menu"><button class="button">Cà phê</button></a>
+                        <a href="/LangCoffee/dich-vu"><button class="button">Kể truyện</button></a>
                     </div>
                 </div>
             </div>
@@ -22,31 +21,22 @@
         <div class="section_container">
             <div class="about_container">
                 <div class="text_section left">
-                    <h2 class="section_title">Câu chuyện thương hiệu</h2>
+                    <h2 class="section_title">Câu chuyện về “Lặng”</h2>
                     <p>
-                        Nốt Hương Đặc Sản - Phê La luôn trân quý, nâng niu những giá trị Nguyên Bản ở mỗi vùng đất mà
-                        chúng tôi đi qua, nơi tâm hồn được đồng điệu với thiên nhiên, với nỗi vất vả nhọc nhằn của người
-                        nông dân; cảm nhận được hết thảy những tầng hương ẩn sâu trong từng nguyên liệu. Một chặng đường
-                        dài đang chờ phía trước, Phê La đã sẵn sàng viết tiếp câu chuyện Nốt Hương Đặc Sản - Nguyên Bản
-                        - Thủ Công đầy cảm hứng và càng tự hào hơn khi được mang sứ mệnh: ``Đánh thức những nốt hương
-                        đặc
+                        Giữa nhịp sống hối hả và xô bồ của thành phố, "Lặng" như một ốc đảo bình yên dành cho những ai muốn tìm kiếm sự an yên trong tâm hồn. Nơi đây mang đến một không gian tĩnh lặng, ấm cúng với những góc nhỏ riêng tư, giúp bạn dễ dàng chìm đắm vào thế giới riêng của mình.
                     </p>
                 </div>
 
                 <div class="image_section">
-                    <img src="./Images/Banner/banner-home-1.png" alt="coffee" />
+                    <img src="/LangCoffee/Images/Banner/banner-home-1.png" alt="coffee" />
                     <div class="slogan">Lặng và Những Điều Khác Biệt</div>
-                    <a href="#" class="button">Xem thêm</a>
+                    <a href="/LangCoffee/story" class="button">Xem thêm</a>
                 </div>
 
                 <div class="text_section right">
-                    <h2 class="section_title">Nguyên liệu đặc sản</h2>
+                    <h2 class="section_title">Hơn cả một quán cà phê</h2>
                     <p>
-                        Trà Ô Long đặc sản tại Phê La còn được ươm trồng với phương pháp chăm bón hữu cơ, hoàn toàn với
-                        trứng gà, đậu nành và thu hái thủ công để có được những búp trà tươi và non nhất, tạo nên điểm
-                        khác biệt mạnh mẽ so với các thương hiệu khác. Có thể nói, dòng trà đặc sản của Phê La luôn giữ
-                        được hương vị thơm ngon nguyên bản nhất và được nhiều người biết đến như một nguồn nguyên liệu
-                        tinh hoa của Đà Lạt.
+                        Giữa những ồn ào náo nhiệt của cuộc sống, “Lặng” không chỉ là nơi để bạn thưởng thức cà phê ngon mà còn là nơi để bạn tìm kiếm sự bình yên, kết nối với bản thân và cộng đồng. Nơi đây mang đến dịch vụ lắng nghe độc đáo, giúp bạn giải tỏa tâm lý, chia sẻ những câu chuyện và suy nghĩ thầm kín, đồng thời kết nối với những người đồng điệu.
                     </p>
                 </div>
             </div>
@@ -58,15 +48,15 @@
         <h2 class="section_title">Combo nổi bật</h2>
         <div class="section_container">
             <div class="service_container">
-            <?php foreach ($comboSP as $combo) : ?>
-                <div class="services_items">
-                    <img src="./Images/Coffee/<?= $combo['sp_anh'] ?>" alt="Hot Beverages" />
-                    <div class="services_text">
-                        <p><?= number_format($combo['sp_gia'], 0, '', ',') ?> VNĐ</p>
-                        <p><?= $combo['sp_thongtin'] ?></p>
-                        <a href="#" class="btn-buy">Mua ngay</a>
+                <?php foreach ($comboSP as $combo) : ?>
+                    <div class="services_items">
+                        <img src="/LangCoffee/Images/Coffee/<?= htmlspecialchars($combo['sp_anh']) ?>" alt="Hot Beverages" />
+                        <div class="services_text">
+                            <p><?= number_format($combo['sp_gia'], 0, '', ',') ?> VNĐ</p>
+                            <p><?= htmlspecialchars($combo['sp_name']) ?></p>
+                            <a href="/LangCoffee/menu/menudetail/<?= $combo['sp_id'] ?>" class="btn-buy">mua ngay</a>
+                        </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
         </div>

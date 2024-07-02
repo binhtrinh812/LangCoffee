@@ -26,7 +26,7 @@ img {
     width: 18%;
     padding: 1rem;
     margin-right: 2rem;
-    border-right: 1.5px solid rgba(180, 0, 0, 0.5);
+    border-right: 2px solid rgba(180, 0, 0, 0.5);
     position: fixed;
 }
 
@@ -44,6 +44,7 @@ img {
     font-size: 1rem;
     font-weight: bold;
     transition: text-shadow 1s ease;
+    text-transform: capitalize;
 }
 
 .sidebar ul li.active a {
@@ -82,15 +83,12 @@ img {
     padding: 0;
 }
 
+.product-container .section_title {
+    text-transform: capitalize;
+}
+
 .product-container .section_title::after {
-    content: '';
-    width: 80px;
-    background: var(--secondary-color);
-    height: 5px;
-    display: block;
-    margin: 7px 0 0 50px;
-    padding-left: 0px;
-    border-radius: 8px;
+    display: none;
 }
 
 .combo-section {

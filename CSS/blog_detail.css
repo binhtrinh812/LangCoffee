@@ -1,0 +1,68 @@
+/* Layout adjustments */
+.trangblog {
+    padding-top: 130px;
+    padding-bottom: 50px;
+}
+
+.container-blog-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography and colors */
+.article-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: #333;
+}
+
+.article-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.article-meta {
+    font-size: 14px;
+    color: #666;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    display: inline-block;
+    background-color: #f8c9ac;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-meta, .article-meta-time {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+}
+
+.article-content {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    text-align: justify;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.article-descript {
+    padding-bottom: 20px;
+    font-size: 20px;
+}

@@ -1,21 +1,20 @@
 RewriteEngine On
+RewriteBase /LangCoffee/
 
-RewriteRule "trang-chu" "index.php"
+# Điều hướng trang chủ
+RewriteRule ^trang-chu$ index.php [L]
 
-# RewriteRule "^([a-zA-Z0-9]+).html$" "index.php?page=$1"
+RewriteRule ^menu$ index.php?page=menu [L]
+RewriteRule ^dich-vu$ index.php?page=person [L]
+RewriteRule ^story$ index.php?page=story [L]
+RewriteRule ^blog$ index.php?page=blog [L]
 
-# RewriteRule "image" "anh.html"
-# RewriteRule "video" "video.html"
-# RewriteRule "upload" "upload.html"
+# Điều hướng chi tiết Menu
+RewriteRule ^menu/menudetail/([0-9]+)$ index.php?page=menu&method=menudetail&id=$1 [L]
+RewriteRule ^person/personDetail/([0-9]+)$ index.php?page=person&method=personDetail&id=$1 [L]
+RewriteRule ^blog/blogDetail/([0-9]+)$ index.php?page=blog&method=blogDetail&id=$1 [L]
 
-
-# RewriteRule "^image/([a-z]+)/([0-9]+).html$" "index.php?page=anh&method=$1&nav=$2"
-
-# RewriteRule "image/cha-ca-odeng/([0-9]+)" "anh/odeng/$1.html"
-# RewriteRule "image/cuon-kimbap/([0-9]+)" "anh/kimbap/$1.html"
-
-
-# RewriteRule "^image/([0-9]+)/([a-zA-Z0-9-]+)" "index.php?page=image&id=$1&name=$2"
-# RewriteRule "^anh/([0-9]+)/([a-zA-Z0-9-]+)" "index.php?page=anh&id=$1&name=$2"
-
-
+# Bỏ qua các tệp tĩnh (CSS, JS, Images)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . - [L]

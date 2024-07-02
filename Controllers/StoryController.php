@@ -1,6 +1,6 @@
 <?php
 include_once './Core/Controller.php';
-class HomeController extends Controller
+class StoryController extends Controller
 {
     public $homeModel;
     public function __construct()
@@ -12,8 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $homeModel = new Home();
-        $comboSP = $homeModel->getSanphambyCombo(1);
 
-        include_once './Views/home.php';
+        include_once './Views/story.php';
     }
 }

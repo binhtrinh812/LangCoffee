@@ -26,7 +26,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 ul {
@@ -96,6 +96,7 @@ footer {
 }
 
 .footer_section h3 {
+    padding-left: 30px;
     font-size: 22px;
     margin-bottom: 16px;
     font-weight: 600;
@@ -141,8 +142,8 @@ footer {
 }
 
 .footer_section .follow_us i {
+    padding-left: 25px;
     color: var(--white-color);
-    padding-right: 10px;
     font-size: 25px;
 }
 /* End Footer */

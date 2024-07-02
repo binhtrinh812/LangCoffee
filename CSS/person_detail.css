@@ -1,0 +1,391 @@
+.container-detail-person {
+    margin: auto;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.container-detail-person h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container-detail-person .section_title::after {
+    content: '';
+    width: 80px;
+    background: var(--secondary-color);
+    height: 5px;
+    display: block;
+    margin: 7px auto 0;
+    border-radius: 8px;
+}
+
+.col .image {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Thêm dòng này để căn giữa theo chiều dọc */
+    text-align: center;
+    height: 100%; /* Đảm bảo div bao quanh ảnh có chiều cao đầy đủ */
+}
+
+.col .image img {
+    max-height: 400px;
+    width: auto;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+    .col {
+        grid-template-columns: 40% 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .col {
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+    .col .image img {
+        width: unset;
+        height: 30vh;
+    }
+}
+
+/* List card */
+.menu-item {
+    margin: 2rem;
+    margin-left: 0;
+    position: relative;
+}
+
+.menu-item-content {
+    background: var(--gray);
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.menu-item-img {
+    width: 200px;
+    height: 210px;
+    margin: 0 auto;
+}
+
+.menu-item-info {
+    padding: 1rem;
+}
+
+.menu-item-name {
+    color: rgb(255, 255, 255);
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.menu-item-name:hover {
+    opacity: 0.8;
+}
+
+.menu-item-price {
+    padding-top: 0.6rem;
+    padding-right: 0.6rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.menu-item-img img {
+    transition: transform 0.6s ease;
+}
+
+.menu-item:hover .menu-item-img img {
+    transform: scale(1.1);
+}
+
+/* Media Queries */
+@media screen and (min-width: 992px) {
+    .menu-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menu-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu-item {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (min-width: 1336px) {
+    .menu-items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.text_detail {
+    text-align: left;
+}
+
+.container-detail-person {
+    width: 100%;
+    padding: 35px 10%;
+    padding-bottom: 0;
+}
+
+.container-detail-person {
+    padding-right: calc(10% - 30px);
+}
+
+main.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    padding-top: 0px;
+}
+
+.col .contents {
+    padding: 0px 30px;
+    border-left: 2px solid #bababa;
+}
+
+.col .contents .box {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.col .contents .box:hover {
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
+}
+
+.col .contents .box::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    top: 0;
+    background-color: #11a372;
+    border: 2px solid white;
+}
+
+.col .contents .box:last-child::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    bottom: 0;
+    background-color: #11a372;
+    border: 2px solid white;
+}
+
+.box h3 {
+    position: relative;
+    color: #11a372;
+    font-weight: 800;
+}
+
+.box h4 {
+    font-size: 16px;
+    padding: 10px 0px 6px;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    main.row {
+        grid-template-columns: 1fr;
+    }
+
+    .row .col:nth-child(2) {
+        margin-top: 30px;
+    }
+}
+
+.book-appointment {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-appointment .button {
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.book-appointment .button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Booking */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+/* CSS cho dropdown select */
+#request {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* CSS cho các option trong dropdown */
+#request option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-bottom: 8px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content button {
+    margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background-color: var(--secondary-color); /* Màu nền nút */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: var(--primary-color); /* Màu nền hover */
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        margin: 25% auto; /* Căn giữa modal trên màn hình nhỏ */
+    }
+}
+
+#successMessage {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#successMessage .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#successMessage .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: #0056b3;
+    opacity: 0.8;
+}

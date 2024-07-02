@@ -29,6 +29,18 @@ include_once './helper/helper.php';
             include_once './Controllers/MenuController.php';
             $menu = new MenuController();
             break;
+        case 'person':
+            include_once './Controllers/PersonController.php';
+            $person = new PersonController();
+            break;
+        case 'story':
+            include_once './Controllers/StoryController.php';
+            $story = new StoryController();
+            break;
+        case 'blog':
+            include_once './Controllers/BlogController.php';
+            $blog = new BlogController();
+            break;
 
 
         default:

@@ -4,7 +4,7 @@
         <h2 class="section_title">Chi tiết sản phẩm</h2>
         <div class="detail">
             <div class="image">
-                <img src="./Images/Coffee/<?= htmlspecialchars($productDetail['sp_anh']) ?>">
+                <img src="/LangCoffee/Images/Coffee/<?= htmlspecialchars($productDetail['sp_anh']) ?>">
             </div>
             <div class="content">
                 <h1 class="name"><?= $productDetail['sp_name'] ?></h1>
@@ -27,18 +27,18 @@
             </p>
         </div>
 
-        <h3 class="section_title section_titleh3">Xem combo khác</h3>
+        <h3 class="section_title section_titleh3">Xem sản phẩm khác</h3>
         <div class="menu-items">
             <?php foreach ($newestProducts as $newProduct) : ?>
                 <div class="menu-item">
-                    <a href="index.php?page=menu&method=menudetail&id=<?= $newProduct['sp_id'] ?>">
+                    <a href="/LangCoffee/menu/menudetail/<?= $newProduct['sp_id'] ?>">
                         <div class="menu-item-content">
                             <div class="menu-item-img">
-                                <img src="./Images/Coffee/<?= htmlspecialchars($newProduct['sp_anh']) ?>" alt="menu item image">
+                                <img src="/LangCoffee/Images/Coffee/<?= htmlspecialchars($newProduct['sp_anh']) ?>" alt="menu item image">
                             </div>
                         </div>
                         <div class="menu-item-info">
-                            <a href="index.php?page=menu&method=menudetail&id=<?= $newProduct['sp_id'] ?>" class="menu-item-name"><?= $newProduct['sp_name'] ?></a>
+                            <div class="menu-item-name"><?= $newProduct['sp_name'] ?></div>
                             <p class="menu-item-price"><?= number_format($newProduct['sp_gia'], 0, ',', '.') ?> VNĐ</p>
                         </div>
                     </a>

@@ -24,7 +24,7 @@ class MenuController extends Controller
     public function index()
     {
         $danhmuc = [];
-        for ($i = 1; $i <= 11; $i++) {
+        for ($i = 1; $i <= 5; $i++) {
             $danhmuc[$i] = $this->menuModel->getDanhmuc($i);
         }
         include_once './Views/menu.php';
