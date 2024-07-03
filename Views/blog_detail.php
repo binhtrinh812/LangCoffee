@@ -8,9 +8,9 @@
             </div>
             <h2 class="article-descript"><?= $blogDetail['noidung'] ?></h2>
             <img src="/LangCoffee/Images/Blog/<?= $blogDetail['avatar'] ?>" alt="Ảnh minh họa">
-            <p class="article-content">
+            <div class="article-content">
                 <?= $blogDetail['content'] ?>
-            </p>
+            </div>
         </article>
     </div>
 </div>
